@@ -1,0 +1,62 @@
+create table planCodes
+(
+planCode varchar(10) primary key,
+planDescription varchar(50) not null,
+coverage1 varchar(50) not null,
+coverage2 varchar(50) not null,
+coverage3 varchar(50) not null,
+coverage4 varchar(50) not null,
+coverage5 varchar(50) not null
+);
+
+
+create table members
+(
+memberId varchar(10) primary key,
+firstName varchar(50) not null,
+lastName varchar(50) not null,
+age number(2) not null,
+gender varchar(6) not null,
+dob varchar(20) not null,
+contactNo number(10) not null,
+altContactNo number(10),
+emailId varchar(50) not null,
+password varchar(15) not null,
+planCode varchar(10) not null,
+coverageStartDate varchar(20) not null,
+coverageEndDate varchar(20) not null,
+addressLine1 varchar(100) not null,
+addressLine2 varchar(100) not null,
+city varchar(50) not null,
+state varchar(50) not null,
+zipCode number(10) not null,
+status varchar(10) not null
+);
+
+create table admins
+(
+adminId varchar(10) primary key,
+firstName varchar(50) not null,
+lastName varchar(50) not null,
+age number(2) not null,
+gender varchar(6) not null,
+dob varchar(15) not null,
+contactNo number(10) not null,
+altContactNo number(10),
+emailId varchar(50) not null,
+password varchar(50) not null
+);
+
+create table Claims
+(
+claimId number(5) primary key,
+memberId varchar(10) not null,
+claimServiceDate varchar(15) not null,
+claimSubmissionDate varchar(15) not null,
+claimProcessingDate varchar(15) not null,
+claimStatus varchar(10) not null,
+claimAmount number(10) not null,
+approvedAmount number(10) not null,
+);
+
+ insert into members values('abcde','shradha','agarwal',21,'female','12-NOV-1997',8479973560,5641,'shradha@gmail.com','poplu',1204,'14-FEB-2018','31-MAR-2019','ghusuri','howrah','kolkata','westbengal','711107','U');
