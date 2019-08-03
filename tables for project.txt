@@ -56,7 +56,7 @@ claimSubmissionDate varchar(15) not null,
 claimProcessingDate varchar(15) not null,
 claimStatus varchar(10) not null,
 claimAmount number(10) not null,
-approvedAmount number(10) not null,
+approvedAmount number(10) not null
 );
 
  insert into members values('abcde','shradha','agarwal',21,'female','12-NOV-1997',8479973560,5641,'shradha@gmail.com','poplu',1204,'14-FEB-2018','31-MAR-2019','ghusuri','howrah','kolkata','westbengal','711107','U');
